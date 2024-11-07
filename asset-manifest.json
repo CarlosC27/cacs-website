@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/cacs-website/static/css/main.bf923915.css",
-    "main.js": "/cacs-website/static/js/main.5b9beeac.js",
-    "static/media/country-surf-boards.JPG": "/cacs-website/static/media/country-surf-boards.aad8eaf89a991e25c81e.JPG",
-    "static/media/MacBookProMockup1.png": "/cacs-website/static/media/MacBookProMockup1.ffdbace8db509d6d9c90.png",
-    "static/media/I-Heart-Elotes.jpg": "/cacs-website/static/media/I-Heart-Elotes.2c352175b7c03eb9320d.jpg",
-    "static/media/Picnic.jpg": "/cacs-website/static/media/Picnic.51c847f8749c94828c89.jpg",
-    "static/media/The_City_Between.jpg": "/cacs-website/static/media/The_City_Between.bbd9cba16cfefb7cd61f.jpg",
-    "static/media/Viable-Veganism-MacBookProMockup.jpg": "/cacs-website/static/media/Viable-Veganism-MacBookProMockup.d16c5aaa066db177742c.jpg",
-    "static/media/MacBookProMockup4.jpg": "/cacs-website/static/media/MacBookProMockup4.8d1283e283f69ec7c8b2.jpg",
-    "static/media/Husky-Fitness-Ap-Phone-Mockup.jpg": "/cacs-website/static/media/Husky-Fitness-Ap-Phone-Mockup.42ad1c2fe512705802ac.jpg",
-    "static/media/regards.otf": "/cacs-website/static/media/regards.fa9611c05438cbe507b7.otf",
-    "static/media/green-instagram.png": "/cacs-website/static/media/green-instagram.1a5fa533fc82534b0783.png",
-    "static/media/LinkedIn-green.png": "/cacs-website/static/media/LinkedIn-green.9201bc3214df3f53b456.png",
-    "static/media/github red.png": "/cacs-website/static/media/github red.cbe631e98726efa6303e.png",
-    "index.html": "/cacs-website/index.html",
-    "main.bf923915.css.map": "/cacs-website/static/css/main.bf923915.css.map",
-    "main.5b9beeac.js.map": "/cacs-website/static/js/main.5b9beeac.js.map"
+    "main.css": "/static/css/main.1771b2fe.css",
+    "main.js": "/static/js/main.31d7e394.js",
+    "static/media/country-surf-boards.JPG": "/static/media/country-surf-boards.aad8eaf89a991e25c81e.JPG",
+    "static/media/MacBookProMockup1.png": "/static/media/MacBookProMockup1.ffdbace8db509d6d9c90.png",
+    "static/media/I-Heart-Elotes.jpg": "/static/media/I-Heart-Elotes.2c352175b7c03eb9320d.jpg",
+    "static/media/Picnic.jpg": "/static/media/Picnic.51c847f8749c94828c89.jpg",
+    "static/media/The_City_Between.jpg": "/static/media/The_City_Between.bbd9cba16cfefb7cd61f.jpg",
+    "static/media/Viable-Veganism-MacBookProMockup.jpg": "/static/media/Viable-Veganism-MacBookProMockup.d16c5aaa066db177742c.jpg",
+    "static/media/MacBookProMockup4.jpg": "/static/media/MacBookProMockup4.8d1283e283f69ec7c8b2.jpg",
+    "static/media/Husky-Fitness-Ap-Phone-Mockup.jpg": "/static/media/Husky-Fitness-Ap-Phone-Mockup.42ad1c2fe512705802ac.jpg",
+    "static/media/regards.otf": "/static/media/regards.fa9611c05438cbe507b7.otf",
+    "static/media/green-instagram.png": "/static/media/green-instagram.1a5fa533fc82534b0783.png",
+    "static/media/LinkedIn-green.png": "/static/media/LinkedIn-green.9201bc3214df3f53b456.png",
+    "static/media/github red.png": "/static/media/github red.cbe631e98726efa6303e.png",
+    "index.html": "/index.html",
+    "main.1771b2fe.css.map": "/static/css/main.1771b2fe.css.map",
+    "main.31d7e394.js.map": "/static/js/main.31d7e394.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf923915.css",
-    "static/js/main.5b9beeac.js"
+    "static/css/main.1771b2fe.css",
+    "static/js/main.31d7e394.js"
   ]
 }
