@@ -1,0 +1,852 @@
+body {
+  margin: 0;
+  font-family: "Khumbh Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F0ECE3;
+  color: #2E3A38;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* 
+Main Green #02C5243 
+Tan #F1EDE4
+Light Green #C3D1BF
+Dark Green #2E3A38
+Orange #C87041
+
+*/
+
+/* Nav Bar */
+.nav-bar {
+  background-color: #2C5243;
+  color: #C3D1BF;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+img.logo-img-nav-bar{
+ width: 4%;
+ margin-left: 16px;
+}
+
+.logo-nav-link {
+  margin-right: auto;
+}
+
+
+@font-face {
+  font-family: 'regards.oft';
+  src: url(./Assets/Regards-Font/regards.otf);
+}
+
+.nav-link-logo {
+  font-family: 'regards.oft';
+  color: #E5D599;
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #C3D1BF;
+  font-weight: bold;
+  margin: 0 20px;
+  position: relative; /* Needed for the underline effect */
+  padding-bottom: 4px;
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Active link color and underline */
+.nav-link.active {
+  color: #E5D599; /* Yellow color for the active link */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #C3D1BF; /* Default color of the underline */
+  transform: scaleX(0); /* Start with the line hidden */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transform-origin: left;
+}
+
+/* Show the underline for active and hovered links */
+.nav-link.active::after {
+  transform: scaleX(1);
+  background-color: #E5D599; /* Yellow underline for the active link */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  background-color: #C3D1BF; /* Original underline color on hover */
+  transform-origin: left; /* Animate from left to right */
+}
+
+.nav-bar {
+  background-color: #2C5243;
+  color: #C3D1BF;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-nav-link {
+  margin-right: auto;
+}
+
+
+
+/* Footer */
+
+.footer-content{
+  background-color: #2C5243;
+  padding: 1%;
+  color: #E5D599;
+  font-size: 8px;
+  margin: 0;
+}
+.Footer-Logo-Section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content img{
+  height: 36px;
+}
+
+
+/* Text */
+
+.Title-Heading-Orange{
+  color: #C87041;
+  font-family: 'regards.oft';
+  font-size: 3.2em;
+}
+
+.Subtitle-Heading{
+  font-family: "Khumbh Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;
+    font-weight: lighter;
+    color: #2C5243;
+    font-size: 2.2em;
+
+}
+
+.Title-Heading-Yellow{
+  color: #E5D599;
+  font-family: 'regards.oft';
+  font-size: 3.2em;
+}
+
+/* Airplane Buttons */
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.airplane-text-button:hover .airplane-image-button {
+  animation: wiggle 0.5s ease;
+}
+
+.airplane-text-button{
+  font-size: 1em;
+  font-family: "Khumbh Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-weight: bold;
+    color: #0F3D20;
+    text-decoration: none;
+}
+
+.airplane-text-button img{
+  width: 32px;
+  height: 16px;
+}
+
+/* Info Cards */
+/* Container for the entire card */
+.Info-Card {
+  position: relative;
+  width: 436px; /* Adjust width as needed */
+  height: 324px; /* Adjust height as needed */
+  overflow: hidden;
+  border-radius: 32px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.Info-Card:hover {
+  transform: scale(1.05);
+}
+
+/* Image styles */
+.Info-Card-Image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Overlay with glass effect */
+.Info-Card-Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Glass effect background */
+  backdrop-filter: blur(10px); /* Adjust blur for glass effect */
+  color: #333;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.Info-Card:hover .Info-Card-Overlay {
+  opacity: 1;
+}
+
+/* Title styling */
+.Info-Card-Title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0F3D20; /* Adjust based on overlay background */
+  margin: 16px 0 0 0; 
+}
+
+/* Tech used text styling */
+.Info-Card-Tech-Used {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #0F3D20; /* Adjust color for contrast */
+  margin: 4px 0 0 0; /* Space between tech used and description */
+}
+
+/* Description container styling */
+.Info-Card-Description-Container {
+ width: 85%;
+}
+
+/* Description text styling */
+.Info-Card-Description {
+  font-size: 0.85rem;
+  color: #2E3A38; /* Adjust for contrast */
+  white-space: normal; /* Allow line wrapping */
+}
+
+/* Learn More button styling */
+.learn-more {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.learn-more .arrow {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover .arrow {
+  transform: translateX(5px);
+}
+
+
+
+
+/* HomePage */
+
+.Intro-title-and-image{
+  display: flex;
+  align-items: center;
+}
+
+.Intro-title-and-image img{
+  width: 322px;
+  height: 100%;
+  margin-right: 10%;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
+}
+.Intro-Section{
+  padding-bottom: 10%;
+}
+
+.Intro{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10%;
+  margin-top: 5%;
+  gap: 16px;
+  
+}
+
+.Intro h1,h2{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.Intro p{
+  width: 80%;
+  margin-top: 0;
+}
+
+.Airplane-Links{
+  display: flex;
+  margin-left: 10%;
+  margin-top: 4px;
+  gap: 24px;
+}
+
+.Recent-Projects-Section{
+  background-color: #2C5243;
+  padding: 2% 0 5% 0;
+}
+
+.Recent-Projects-Section h1{
+  margin-left: 10%;
+}
+
+.Project-Info-Cards {
+  display: flex;
+  gap: 80px; /* Space between cards */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Prevents wrapping */
+  scroll-snap-type: x mandatory; /* Optional: enables smooth snapping */
+  padding: 24px 32px 24px 32px;
+  scroll-padding-left: 5%; 
+}
+
+.spacer {
+  width: 80px; /* Creates 80px of space before the first card */
+  margin-left: 80px;
+}
+
+.Project-Info-Cards > .Info-Card {
+  flex: 0 0 auto; /* Ensures cards stay inline */
+  scroll-snap-align: start; /* Optional: enables smooth snapping for each card */
+}
+
+/* About me Section */
+
+.About-Me-Section{
+  padding: 10% 5%;
+  background-color: #F1EDE4;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  margin-right: 10%;
+  gap: 56px;
+  margin-left: 10%;
+
+}
+
+
+
+.About-Me-Section-Img{
+  width: 322px;
+  height: auto;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.07), 0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05), 0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04);
+}
+.About-Me-Section-Text-Content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.About-Me-Section-Text-Content h1{
+  line-height: 0;
+}
+
+.About-Me-Section p{
+  margin-top: 0;
+}
+
+/* Contact me Section */
+
+.Contact-Me-Section {
+  background-color: #2C5243;
+  color: #F0ECE3;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 3%;
+  padding: 7% 0;
+}
+.Contact-Me-Section-Img-Container {
+  margin-left: 10%;
+  width: 322px;
+  height: 100%;
+}
+
+.Contact-Me-Section-Text-Content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-right: 10%;
+}
+
+.Contact-Me-Section .airplane-text-button{
+  color:#F1EDE4
+}
+
+/* Connect with me elsewhere */
+
+.Connect-With-Me-Elsewhere {
+  display: flex;
+  flex-direction: column;
+  padding: 8% 10%;
+}
+
+.Connect-With-Me-Elsewhere h2{
+  font-family: 'regards.oft';
+  color: #C87041;
+  margin-bottom: 3%;
+}
+
+.Social-Links-Box{
+  display: flex;
+  flex-direction: column;
+}
+
+.Social-Links{
+  padding-bottom: 1.5%;
+  display: flex;
+  flex-direction: row;
+  gap: 1%;
+  align-items: center;
+}
+
+.Connect-With-Me-Elsewhere img {
+  max-height: 20px;  
+}
+
+/* Under construction */
+
+.Under-Construction-Page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 80vh;
+}
+
+.construction-gif {
+  max-width: 100%;
+  width: 500px; /* Adjust as needed */
+}
+.Under-Construction-Section{
+  margin: 4%;
+ align-content: center;
+}
+
+.construction-message {
+  font-family: 'regards.oft', 'Arial', sans-serif;
+  color: #C87041; /* Gold color for Taylor Swift vibe */
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #C3D1BF;
+  cursor: pointer;
+}
+
+
+/* Vertical Phone */
+@media (max-width: 767px) {
+
+  /* General */
+  body{
+    font-size: 16px;
+  }
+
+
+/* Intro */
+  .Intro-title-and-image{
+    flex-direction: column;
+  }
+
+  .Intro-title-and-image h1 {
+    padding-top: 5%;
+    font-size: 2.5em;
+  }
+  .Intro-title-and-image  img{
+    height: auto;
+    width: 90%;
+    max-width: 400px;
+    margin-top: 5%;
+    box-shadow: none;
+  }
+
+  .Intro-Section h2{
+    font-size: 1.6em;
+  }
+
+  .Intro-Section p {
+    width: 90%;
+  }
+/* Airplane Buttons */
+  .airplane-text-button img{
+    width: 24px;
+    height: 12px;
+  }
+
+  .Airplane-Links{
+    gap:8px;
+    flex-direction: column;
+  }
+/* About me section */
+.About-Me-Section{
+  flex-direction: column;
+  gap: 20%;
+}
+.About-Me-Section-Img{
+  height: auto;
+  width: 90%;
+  max-width: 400px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  box-shadow: none;
+
+}
+.About-Me-Section-Text-Content{
+  width: 95%;
+}
+
+.About-Me-Section-Img-Container img{
+  width: 100%;
+  padding-top: 2.5%;
+}
+
+/* contact */
+
+.Contact-Me-Section{
+  flex-direction: column;
+  align-items: center;
+}
+.Contact-Me-Section h1 {
+  padding-top: 5%;
+  margin: 0;
+}
+.Contact-Me-Section-Text-Content
+{
+  margin-left: 10%;
+}
+
+.Contact-Me-Section-Img-Container{
+  margin-left: 0;
+  padding-top: 2.5%;
+}
+
+/* connect elsewhere */
+.Connect-With-Me-Elsewhere img{
+  max-height: 12px;
+}
+
+/* footer */
+
+.Footer-Image-Container{
+  height: 24px;
+  padding: 2%;
+}
+
+/* Under construction */
+
+.Under-Construction-Page{
+  height: 85vh;
+}
+
+.menu-toggle {
+  display: block;
+}
+
+/* Nav Bar */
+.main-nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust based on nav-bar height */
+  right: 0;
+  background-color: #2C5243;
+  width: 100%;
+  padding: 10px;
+}
+
+.main-nav-links.open {
+  display: flex;
+}
+
+.nav-link {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+  
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* General */
+  body {
+    font-size: 20px;
+  }
+
+
+  /* Intro Section */
+  .Intro-title-and-image {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .Intro-Section h1{
+    font-size: 2.8em;
+  }
+
+  .Intro-Section h2 {
+    font-size: 2em;
+  }
+
+  .Intro-Section img{
+    box-shadow: none;
+  }
+
+  .Intro-Section{
+    padding-right: 7%;
+  }
+
+  .Intro-title-and-image img {
+    width: 80%;
+    max-width: 300px;
+    margin-top: 0;
+    margin-right: 5%;
+  }
+
+  /* Project Cards */
+  .Project-Info-Cards {
+    flex-wrap: nowrap;
+    gap: 60px;
+  }
+
+  /* About Me Section */
+  .About-Me-Section {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 5%;
+    padding: 5%;
+    gap: 24px;
+  }
+
+  .About-Me-Section h1{
+    font-size: 2.8em;
+  }
+
+ 
+
+  .About-Me-Section-Img-Container{
+    max-width: 264px;
+  }
+
+  .About-Me-Section-Img-Container img{
+    max-width: 264px ;
+  }
+
+  /* Contact Section */
+  .Contact-Me-Section {
+    flex-direction: row-reverse;
+    gap: 16px;
+    align-items: center;
+    padding: 6% 4%;
+  }
+
+  .Contact-Me-Section h1{
+    font-size: 2.8em;
+    margin: 0;
+  }
+
+  .Contact-Me-Section img{
+    max-width: 264px ;
+  }
+
+  .Contact-Me-Section-Img-Container{
+   margin-left: 7%;
+  }
+
+  .Contact-Me-Section-Text-Content{
+    margin-bottom: 2%;
+    margin-left: 2%;
+  }
+
+ 
+
+  /* Social Links */
+  .Connect-With-Me-Elsewhere {
+    padding: 6% 8%;
+  }
+
+  .Social-Links-Box {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Under construction */
+
+.Under-Construction-Page{
+  height: 90vh;
+}
+
+.Under-Construction-Page img{
+  width: 800px;
+  height: auto;
+}
+
+.menu-toggle {
+  display: block;
+}
+
+/* Nav Bar */
+.main-nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust based on nav-bar height */
+  right: 0;
+  background-color: #2C5243;
+  width: 100%;
+  padding: 10px;
+}
+
+.main-nav-links.open {
+  display: flex;
+}
+
+.nav-link {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+}
+
+/* Small Desktop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+  /* General */
+  body {
+    font-size: 19px;
+  }
+
+  /* Nav Bar */
+  .nav-links {
+    gap: 24px;
+  }
+
+  /* Intro Section */
+  .Intro-title-and-image {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .Intro-title-and-image img {
+    width: 75%;
+    max-width: 400px;
+  }
+
+  .Subtitle-Heading {
+    font-size: 2em;
+  }
+
+  /* Project Cards */
+  .Project-Info-Cards {
+    gap: 64px;
+    scroll-padding-left: 2%;
+  }
+
+  /* About Me Section */
+  .About-Me-Section {
+    padding: 8% 4%;
+  }
+
+  .About-Me-Section-Img {
+    width: 70%;
+  }
+
+  /* Contact Section */
+  .Contact-Me-Section {
+    gap: 5%;
+  }
+}
+
+/* Large Mobile */
+@media (min-width: 576px) and (max-width: 767px) {
+
+  /* General */
+  body {
+    font-size: 15px;
+  }
+
+  /* Nav Bar */
+  .nav-link {
+    font-size: 18px;
+  }
+
+  /* Project Cards */
+  .Project-Info-Cards {
+    gap: 40px;
+  }
+
+  /* About Me Section */
+  .About-Me-Section {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .About-Me-Section-Img {
+    width: 85%;
+    margin-top: 3%;
+  }
+
+  /* Contact Section */
+  .Contact-Me-Section {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
