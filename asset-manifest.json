@@ -1,8 +1,7 @@
 {
   "files": {
     "main.css": "/cacs-website/static/css/main.bf923915.css",
-    "main.js": "/cacs-website/static/js/main.5fb560fe.js",
-    "static/js/453.acca0757.chunk.js": "/cacs-website/static/js/453.acca0757.chunk.js",
+    "main.js": "/cacs-website/static/js/main.5b9beeac.js",
     "static/media/country-surf-boards.JPG": "/cacs-website/static/media/country-surf-boards.aad8eaf89a991e25c81e.JPG",
     "static/media/MacBookProMockup1.png": "/cacs-website/static/media/MacBookProMockup1.ffdbace8db509d6d9c90.png",
     "static/media/I-Heart-Elotes.jpg": "/cacs-website/static/media/I-Heart-Elotes.2c352175b7c03eb9320d.jpg",
@@ -17,11 +16,10 @@
     "static/media/github red.png": "/cacs-website/static/media/github red.cbe631e98726efa6303e.png",
     "index.html": "/cacs-website/index.html",
     "main.bf923915.css.map": "/cacs-website/static/css/main.bf923915.css.map",
-    "main.5fb560fe.js.map": "/cacs-website/static/js/main.5fb560fe.js.map",
-    "453.acca0757.chunk.js.map": "/cacs-website/static/js/453.acca0757.chunk.js.map"
+    "main.5b9beeac.js.map": "/cacs-website/static/js/main.5b9beeac.js.map"
   },
   "entrypoints": [
     "static/css/main.bf923915.css",
-    "static/js/main.5fb560fe.js"
+    "static/js/main.5b9beeac.js"
   ]
 }
